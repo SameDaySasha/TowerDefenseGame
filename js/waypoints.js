@@ -1,4 +1,4 @@
-"objects"=
+const waypoints =
 [
   {
     height: 0,
@@ -64,3 +64,4 @@
     ],
   },
 ];
+ 
