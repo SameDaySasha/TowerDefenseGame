@@ -11,15 +11,18 @@ console.log(canvas);
 const image = new Image();
 image.onload = () => {
   c.drawImage(image, 0, 0);
-  c.fillStyle = "red";
-  c.fillRect(200, 400, 100, 100);
+  
 };
 image.src = "img/gameMap.png";
 
-
+let x = 200
 function animate(){
   requestAnimationFrame(animate);
+
+
+  c.fillStyle = "red";
+  c.fillRect(x, 400, 100, 100);
   console.log('go')
 }
 
-animate()
+animate
