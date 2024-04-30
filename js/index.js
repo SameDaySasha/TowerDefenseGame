@@ -19,4 +19,7 @@ image.src = "img/gameMap.png";
 
 function animate(){
   requestAnimationFrame(animate);
+  console.log('go')
 }
+
+animate()
