@@ -8,7 +8,11 @@ c.fillStyle = "white";
 c.fillRect(0, 0, canvas.width, canvas.height);
 console.log(canvas);
 const image = new Image();
+
 image.onload = () => {
   c.drawImage(image, 0, 0, canvas.width, canvas.height);
 };
 image.src = "img/gameMap.png";
+
+
+c.fillRect(200, 400, 100, 100);
