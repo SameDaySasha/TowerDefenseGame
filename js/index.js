@@ -11,6 +11,7 @@ console.log(canvas);
 const image = new Image();
 image.onload = () => {
   c.drawImage(image, 0, 0);
+  c.fillStyle = "red";
   c.fillRect(200, 400, 100, 100);
 };
 image.src = "img/gameMap.png";
