@@ -7,12 +7,12 @@ canvas.height = 768;
 c.fillStyle = "white";
 c.fillRect(0, 0, canvas.width, canvas.height);
 console.log(canvas);
-const image = new Image();
 
+const image = new Image();
 image.onload = () => {
-  c.drawImage(image, 0, 0, canvas.width, canvas.height);
+  c.drawImage(image, 0, 0);
+  c.fillRect(200, 400, 100, 100);
 };
 image.src = "img/gameMap.png";
 
 
-c.fillRect(200, 400, 100, 100);
