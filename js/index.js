@@ -17,3 +17,6 @@ image.onload = () => {
 image.src = "img/gameMap.png";
 
 
+function animate(){
+  requestAnimationFrame(animate);
+}
