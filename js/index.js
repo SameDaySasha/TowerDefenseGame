@@ -9,38 +9,33 @@ c.fillRect(0, 0, canvas.width, canvas.height);
 console.log(canvas);
 
 const image = new Image();
-image.onload = () => {
-};
+image.onload = () => {};
 image.src = "img/gameMap.png";
 
-let x = 200
+
 
 class Enemy {
-  constructor(){
-    this.position = {x: 0, y: 0}
-this.width = 100
-  this.height = 100
-
+  constructor() {
+    this.position = { x: 0, y: 0 };
+    this.width = 100;
+    this.height = 100;
   }
-
-  
+  draw(){
+    c.fillStyle = "red";
+    c.fillRect(this.position.x, this.position.y, this.width, this.height);
+  }
+  update(){
+    this.draw();
+    this.position.x += 1;
+  }
 }
+const enemy = new Enemy();
 
-
-
-
-function animate(){
+function animate() {
   requestAnimationFrame(animate);
 
   c.drawImage(image, 0, 0);
-  
-  c.fillStyle = "red";
-  c.fillRect(x, 400, 100, 100);
-
-  c.fillStyle = "red";
-  c.fillRect(x, 400, 100, 100);
-  x++
- 
+  enemy.update();
 }
 
-animate()
+animate();
