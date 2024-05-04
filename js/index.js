@@ -15,8 +15,8 @@ image.src = "img/gameMap.png";
 
 
 class Enemy {
-  constructor() {
-    this.position = { x: 0, y: 0 };
+  constructor({position = { x: 0, y: 0 }}) {
+    this.position = position
     this.width = 100;
     this.height = 100;
   }
@@ -29,13 +29,14 @@ class Enemy {
     this.position.x += 1;
   }
 }
-const enemy = new Enemy();
-
+const enemy = new Enemy({position: { x: 200, y:400 }});
+const enemy2 = new Enemy({position: { x: 0, y:400 }});
 function animate() {
   requestAnimationFrame(animate);
 
   c.drawImage(image, 0, 0);
   enemy.update();
+  enemy2.update();
 }
 
 animate();
