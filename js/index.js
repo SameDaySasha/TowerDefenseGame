@@ -14,6 +14,21 @@ image.onload = () => {
 image.src = "img/gameMap.png";
 
 let x = 200
+
+class Enemy {
+  constructor(){
+    this.position = {x: 0, y: 0}
+this.width = 100
+  this.height = 100
+
+  }
+
+  
+}
+
+
+
+
 function animate(){
   requestAnimationFrame(animate);
 
@@ -21,8 +36,11 @@ function animate(){
   
   c.fillStyle = "red";
   c.fillRect(x, 400, 100, 100);
+
+  c.fillStyle = "red";
+  c.fillRect(x, 400, 100, 100);
   x++
-  console.log('go')
+ 
 }
 
 animate()
