@@ -28,7 +28,8 @@ class Enemy {
     this.draw();
     
     this.position.x += 1;
-    const yDistance = this.position.y
+    const waypoint = waypoints[0]
+    const yDistance = waypoint.y - this.position.y
     const angle = Math.atan2(yDistance, xDistance);
   }
 }
