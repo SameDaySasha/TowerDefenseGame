@@ -1,10 +1,5 @@
-const waypoints =
-[
-  {
-    height: 0,
-    id: 7,
-    name: "",
-    polyline: [
+const waypoints = [
+
       {
         x: 0,
         y: 0,
@@ -61,7 +56,7 @@ const waypoints =
         x: 1443.33333333333,
         y: 522,
       },
-    ],
-  },
-];
+    ]
+  
+
  

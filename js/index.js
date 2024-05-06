@@ -26,7 +26,10 @@ class Enemy {
   }
   update(){
     this.draw();
+    
     this.position.x += 1;
+    const yDistance = this.position.y
+    const angle = Math.atan2(yDistance, xDistance);
   }
 }
 const enemy = new Enemy({position: { x: 200, y:400 }});
