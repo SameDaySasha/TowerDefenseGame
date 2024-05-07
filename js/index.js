@@ -52,7 +52,7 @@ console.log(this.position.x, this.position.y, waypoint.x, waypoint.y);
 }
 
 const enemies = [];
-for(let i = 0; i < 10; i++){
+for(let i = 0; i < 15; i++){
   const xOffset = i * 150
   enemies.push(new Enemy({ position: { x: waypoints[0].x - xOffset, y: waypoints[0].y } }));
 }
