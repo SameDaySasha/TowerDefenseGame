@@ -13,7 +13,27 @@ const placementTilesData2d = [];
 for (let i = 0; i < placementTilesData.length; i += 20){
   placementTilesData2d.push[placementTilesData.slice(i, i + 20)]
 }
-console.log(placementTilesData2d)
+class PlacementTile{
+  constructor({position = {x: 0, y: 0}}) {
+    this.position = position;
+   this.size = 64
+  }
+  draw(){
+    c.fillRect(this.position.x, this.position.y,this.size, this.size);
+  }
+}
+const placementTiles = [];
+
+placementTilesData2d.forEach((row, y) => {
+  row.forEach(symbol, x =>{
+    if (symbol === 14){
+      // add building placement tile
+      placementTiles.push(new PlacementTile({position: {x: x * 64, y: y * 64}}))
+    }
+  })
+})
+console.log(placementTiles)
+
 const image = new Image();
 image.onload = () => {};
 image.src = "img/gameMap.png";
