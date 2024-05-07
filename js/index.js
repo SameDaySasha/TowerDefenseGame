@@ -33,7 +33,7 @@ class Enemy {
 
     this.position.x += Math.cos(angle);
     this.position.y += Math.sin(angle);
-
+console.log(this.position.x, this.position.y, waypoint.x, waypoint.y);
     if (
       Math.round(this.position.x) === Math.round(waypoint.x) &&
       Math.round(this.position.y) === Math.round(waypoint.y) && this.waypointIndex < waypoints.length - 1
@@ -42,8 +42,10 @@ class Enemy {
     }
   }
 }
-const enemy = new Enemy({ position: { x: 200, y: 400 } });
-const enemy2 = new Enemy({ position: { x: 0, y: 400 } });
+const enemy = new Enemy({ position: { x: waypoints[0].x, y: waypoints[0].y } });
+const enemy2 = new Enemy({ position: {x: waypoints[0].x - 150, y: waypoints[0].y} });
+
+
 function animate() {
   requestAnimationFrame(animate);
 
