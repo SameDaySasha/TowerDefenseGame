@@ -41,7 +41,6 @@ class Enemy {
       x: this.position.x + this.width / 2,
       y: this.position.y + this.height / 2
     }
-console.log(this.position.x, this.position.y, waypoint.x, waypoint.y);
     if (
       Math.round(this.center.x) === Math.round(waypoint.x) &&
       Math.round(this.center.y) === Math.round(waypoint.y) && this.waypointIndex < waypoints.length - 1
@@ -57,7 +56,7 @@ for(let i = 0; i < 15; i++){
   enemies.push(new Enemy({ position: { x: waypoints[0].x - xOffset, y: waypoints[0].y } }));
 }
 
-
+console.log(placementTilesData)
 function animate() {
   requestAnimationFrame(animate);
 
