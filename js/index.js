@@ -8,6 +8,12 @@ c.fillStyle = "white";
 c.fillRect(0, 0, canvas.width, canvas.height);
 console.log(canvas);
 
+console.log(placementTilesData)
+const placementTilesData2d = [];
+for (let i = 0; i < placementTilesData.length; i += 20){
+  placementTilesData2d.push[placementTilesData.slice(i, i + 20)]
+}
+console.log(placementTilesData2d)
 const image = new Image();
 image.onload = () => {};
 image.src = "img/gameMap.png";
@@ -56,8 +62,11 @@ for(let i = 0; i < 15; i++){
   enemies.push(new Enemy({ position: { x: waypoints[0].x - xOffset, y: waypoints[0].y } }));
 }
 
-console.log(placementTilesData)
+
+
 function animate() {
+
+
   requestAnimationFrame(animate);
 
   c.drawImage(image, 0, 0);
