@@ -1,3 +1,6 @@
+
+
+// waypoint data from game map
 const waypoints = [
       {
         x: -150.666666666667,
